@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CommerceBuilder.Providers_Tax">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder.Providers\CommerceBuilder.Providers_Tax.sln">
+</Property><Property Name="Date" Value="Monday, September 19, 2011">
+</Property><Property Name="Time" Value="13:33 PM">
+</Property></Properties><Event ErrorLevel="1" Project="CCH" Source="CertiTAX\CCH.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="CCH" Source="CertiTAX\CCH.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CCH" Source="CertiTAX\CCH.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="AbleCommerceTax" Source="AbleCommerceTax\AbleCommerceTax.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="AbleCommerceTax" Source="AbleCommerceTax\AbleCommerceTax.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AbleCommerceTax" Source="AbleCommerceTax\AbleCommerceTax.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AvaTax" Source="Avalara\AvaTax.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AvaTax" Source="Avalara\AvaTax.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="WATax" Source="WATax\WATax.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="WATax" Source="WATax\WATax.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WATax" Source="WATax\WATax.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CommerceBuilder.Providers_Tax.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CommerceBuilder.Providers_Tax.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CCH" Source="CertiTAX\CCH.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="AbleCommerceTax" Source="AbleCommerceTax\AbleCommerceTax.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="AvaTax" Source="Avalara\AvaTax.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="WATax" Source="WATax\WATax.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

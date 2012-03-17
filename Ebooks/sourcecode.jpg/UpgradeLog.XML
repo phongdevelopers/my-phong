@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CommerceBuilderSrc-vs2008">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilderSrc-vs2008.sln">
+</Property><Property Name="Date" Value="Monday, September 19, 2011">
+</Property><Property Name="Time" Value="13:32 PM">
+</Property></Properties><Event ErrorLevel="0" Project="CommerceBuilder" Source="CommerceBuilder\CommerceBuilder.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CommerceBuilder" Source="CommerceBuilder\CommerceBuilder.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CommerceBuilder.Data" Source="CommerceBuilder.Data\CommerceBuilder.Data.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CommerceBuilder.Data" Source="CommerceBuilder.Data\CommerceBuilder.Data.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CommerceBuilder.Web" Source="CommerceBuilder.Web.UI\CommerceBuilder.Web.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CommerceBuilder.Web" Source="CommerceBuilder.Web.UI\CommerceBuilder.Web.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="CommerceBuilderSrc-vs2008.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CommerceBuilderSrc-vs2008.sln" Description="Converted">
+</Event></UpgradeLog>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:api="http://www.fedex.com/fsmapi" elementFormDefault="qualified">
+	<xs:include schemaLocation="FDXShared.xsd"/>
+	<xs:element name="FDXTrack2Request">
+		<xs:annotation>
+			<xs:documentation>
+				<api:description>requests tracking information on one or more packages</api:description>
+				<api:applicableCarriers>ALL</api:applicableCarriers>
+				<api:validFor>ALL</api:validFor>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestHeader" type="RequestHeader">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>request boilerplate</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PackageIdentifier" type="PackageIdentifier">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>any one of several kinds of identifier for which all packages to which it applies will be tracked</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="TrackingNumberUniqueIdentifier" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>one of the TrackingNumberUniqueIdentifiers returned in a previous reply</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ShipDateRangeBegin" type="xs:date" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>TBD</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+							<api:requirementsAndDependencies>Optional; required if ShipDateRangeEnd is provided</api:requirementsAndDependencies>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ShipDateRangeEnd" type="xs:date" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>TBD</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+							<api:requirementsAndDependencies>Optional; required if ShipDateRangeBegin is provided</api:requirementsAndDependencies>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ShipmentAccountNumber" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>account number associated with shipment (as opposed to account number in RequestHeader, which is that of party sending request); if not specified, then the DestinationCountryCode and DestinationPostalCode (where applicable) are required</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Destination" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DestinationCountryCode" type="CountryCode">
+								<xs:annotation>
+										<xs:documentation>
+										<api:description>country code of shipment destination</api:description>
+										<api:applicableCarriers>ALL</api:applicableCarriers>
+										<api:validFor>ALL</api:validFor>
+										<api:requirementsAndDependencies>Optional</api:requirementsAndDependencies>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="DestinationPostalCode" type="PostalCode" minOccurs="0" maxOccurs="1">
+								<xs:annotation>
+									<xs:documentation>
+										<api:description>postal code of shipment destination</api:description>
+										<api:applicableCarriers>ALL</api:applicableCarriers>
+										<api:validFor>ALL</api:validFor>
+										<api:requirementsAndDependencies>Optional</api:requirementsAndDependencies>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Language" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LanguageCode" type="LanguageCode">
+								<xs:annotation>
+									<xs:documentation>
+										<api:description>ISO 639-1 alpha-2 code of language desired for certain text elements in reply</api:description>
+										<api:applicableCarriers>ALL</api:applicableCarriers>
+										<api:validFor>ALL</api:validFor>
+										<api:requirementsAndDependencies>Optional</api:requirementsAndDependencies>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="LocaleCode" type="LocaleCode" minOccurs="0" maxOccurs="1">
+								<xs:annotation>
+									<xs:documentation>
+										<api:description>can be used to specify the dialect or sublanguage of some languages specified with the LanguageCode</api:description>
+										<api:applicableCarriers>ALL</api:applicableCarriers>
+										<api:validFor>ALL</api:validFor>
+										<api:requirementsAndDependencies>Optional</api:requirementsAndDependencies>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DetailScans" type="xs:boolean" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>TBD</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+							<api:requirementsAndDependencies>Optional; defaults to false</api:requirementsAndDependencies>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PagingToken" type="xs:string" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							<api:description>TBD</api:description>
+							<api:applicableCarriers>ALL</api:applicableCarriers>
+							<api:validFor>ALL</api:validFor>
+							<api:requirementsAndDependencies>Optional</api:requirementsAndDependencies>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

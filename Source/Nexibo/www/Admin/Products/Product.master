@@ -1,0 +1,27 @@
+<%@ Master Language="C#" MasterPageFile="../Admin.master" %>
+<%@ Register Src="ProductMenu.ascx" TagName="ProductMenu" TagPrefix="uc" %>
+<script runat="server">
+    private int _ProductId = 0;
+    private Product _Product;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        _ProductId = PageHelper.GetProductId();
+        _Product = ProductDataSource.Load(_ProductId);
+        //Caption.Text = string.Format(Caption.Text, _Product.Name);
+    }    
+</script>
+<asp:Content ID="MainContent1" runat="server" ContentPlaceHolderID="MainContent">
+    <table class="innerLayout" width="100%">
+        <tr>
+            <td class="menuPanel" valign="top">
+                <uc:ProductMenu ID="ProductMenu1" runat="server" />
+                <asp:ContentPlaceHolder ID="PrimarySidebarContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="innerLayoutContent" valign="top">
+                <asp:contentplaceholder ID="MainContent" runat="server">
+                </asp:contentplaceholder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

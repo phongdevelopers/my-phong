@@ -1,0 +1,6 @@
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\Website\bin\CommerceBuilder.Web.dll
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\Website\bin\CommerceBuilder.Web.pdb
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder.Web.UI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder.Web.UI\obj\Debug\CommerceBuilder.Web.UI.WebControls.SearchKeywordValidator.js
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder.Web.UI\obj\Debug\CommerceBuilder.Web.dll
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder.Web.UI\obj\Debug\CommerceBuilder.Web.pdb

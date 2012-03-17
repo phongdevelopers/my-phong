@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthorizePaymentRequest" xml:space="preserve">
+    <value>A payment authorization for {0:C} is being requested.</value>
+    <comment>Note added to order when a payment authorization is being requested.</comment>
+  </data>
+  <data name="BasketChildItemUnavailable" xml:space="preserve">
+    <value>The item {0}, as part of {1}, is no longer available.  The item {1} has been removed from the basket.</value>
+    <comment>Message displayed when a child item (such as a kit member product) is unavailable and the parent item is removed from the basket.</comment>
+  </data>
+  <data name="BasketItemBelowMinQuantity" xml:space="preserve">
+    <value>The quantity of item {0} is below the minimum purchase quantity of {1}.  The quantity has been increased to the minimum.</value>
+  </data>
+  <data name="BasketItemBelowMinQuantityAboveStock" xml:space="preserve">
+    <value>The item '{0}' can not be purchased because its available stock is below the minimum purchase quantity of {1}. The item has been removed from the basket.</value>
+  </data>
+  <data name="BasketItemExceedsAvailableStock" xml:space="preserve">
+    <value>The quantity of item {0} exceeds the available stock {1}.  The quantity has been reduced to quantity available.</value>
+  </data>
+  <data name="BasketItemExceedsMaxQuantity" xml:space="preserve">
+    <value>The quantity of item {0} exceeds the purchase limit of {1}.  The quantity has been reduced to the limit.</value>
+  </data>
+  <data name="BasketItemModified" xml:space="preserve">
+    <value>The item {0} has been updated.  Please confirm your items before continuing.</value>
+    <comment>Message displayed if a basket item (e.g. a kit) is modified by the merchant and must be updated in the basket.</comment>
+  </data>
+  <data name="BasketItemOutOfStock" xml:space="preserve">
+    <value>The item {0} is out of stock. It has been removed from the basket.</value>
+  </data>
+  <data name="BasketItemUnavailable" xml:space="preserve">
+    <value>The item {0} is no longer available.  It has been removed from the basket.</value>
+    <comment>Message displayed when an item is removed from the basket because the product is deleted or the variant is not valid.</comment>
+  </data>
+  <data name="CapturePaymentRequest" xml:space="preserve">
+    <value>A payment capture for {0:C} is being requested.</value>
+    <comment>Note added to order when a payment capture is being requested.</comment>
+  </data>
+  <data name="KitBasketItemExceedsAvailableStock" xml:space="preserve">
+    <value>The quantity of item {0} or one of its components exceeds the available stock.  The quantity has been reduced to quantity available.</value>
+  </data>
+  <data name="KitBasketItemOutOfStock" xml:space="preserve">
+    <value>The item '{0}' or one of its components is currently out of stock. It has been removed from the basket.</value>
+  </data>
+  <data name="KitComponentOutOfStock" xml:space="preserve">
+    <value>All options for '{0}' are currently out of stock.</value>
+  </data>
+  <data name="OrderCancelled" xml:space="preserve">
+    <value>The order has been cancelled.</value>
+    <comment>Note added to order by system when an order is cancelled.</comment>
+  </data>
+  <data name="OrderPaid" xml:space="preserve">
+    <value>The order has been paid, no balance remains.</value>
+    <comment>Note added to order by system when the order is paid with no remaining balance.</comment>
+  </data>
+  <data name="OrderPaidCreditBalance" xml:space="preserve">
+    <value>The order has been paid, a credit balance of {0:C} remains.</value>
+    <comment>Note added to order by system when the order is paid and has a credit balance.</comment>
+  </data>
+  <data name="OrderPaidPartial" xml:space="preserve">
+    <value>The order has been partially paid, a balance of {0:C} remains.</value>
+    <comment>Note added to order by system when the order is paid in part.</comment>
+  </data>
+  <data name="OrderPlaced" xml:space="preserve">
+    <value>The order has been submitted.</value>
+    <comment>Note added to order by system when an order is placed.</comment>
+  </data>
+  <data name="OrderShipped" xml:space="preserve">
+    <value>The order has been shipped.</value>
+    <comment>Note added to order by system when the order is shipped.</comment>
+  </data>
+  <data name="OrderShippedPartial" xml:space="preserve">
+    <value>The order has been partially shipped, {0} items remain unshipped.</value>
+    <comment>Note added to order by system when the order is shipped in part.</comment>
+  </data>
+  <data name="OrderStatusUpdated" xml:space="preserve">
+    <value>The order status has been changed from {0} to {1}.</value>
+    <comment>Note added to order by system when the order status changes.</comment>
+  </data>
+  <data name="PaymentAuthorizationFailed" xml:space="preserve">
+    <value>A payment authorization for {0:C} has failed.</value>
+    <comment>Note added to order by system when a payment authorization fails.</comment>
+  </data>
+  <data name="PaymentAuthorized" xml:space="preserve">
+    <value>A payment authorization for {0:C} has been received.</value>
+    <comment>Note added to order by system when a payment is authorized.</comment>
+  </data>
+  <data name="PaymentCaptured" xml:space="preserve">
+    <value>A payment capture for {0:C} has been received.  No further captures possible.</value>
+    <comment>Note added to order by system when a payment is captured and no further captures are possible.</comment>
+  </data>
+  <data name="PaymentCapturedPartial" xml:space="preserve">
+    <value>A payment capture for {0:C} has been received.</value>
+    <comment>Note added to order by system when a payment is partially captured and further captures are possible.</comment>
+  </data>
+  <data name="PaymentCaptureFailed" xml:space="preserve">
+    <value>A payment capture for {0:C} has failed.</value>
+    <comment>Note added to order by system when a payment capture fails.</comment>
+  </data>
+  <data name="PaymentRefunded" xml:space="preserve">
+    <value>A refund of {0:C} has been processed.</value>
+    <comment>Note added to order by system when a refund is processed.</comment>
+  </data>
+  <data name="PaymentVoided" xml:space="preserve">
+    <value>A payment of {0:C} has been voided.</value>
+    <comment>Note added to order by system when a payment is voided.</comment>
+  </data>
+  <data name="PaymentVoidedPartial" xml:space="preserve">
+    <value>A payment authorization for {0:C} has been voided.  Prior captures of {0:C} have already been completed.</value>
+    <comment>Note added to order by system when a payment is voided but prior captures exist.</comment>
+  </data>
+  <data name="WishlistItemModified" xml:space="preserve">
+    <value>The item {0} has been updated.  Please confirm your items before continuing.</value>
+    <comment>Message displayed if a wishlist item (e.g. a kit) is modified by the merchant and must be updated in the wishlist.</comment>
+  </data>
+  <data name="WishlistItemUnavailable" xml:space="preserve">
+    <value>The item {0} is no longer available.  It has been removed from the wishlist.</value>
+    <comment>Message displayed when an item is removed from the wishlist because the product is deleted or the variant is not valid.</comment>
+  </data>
+</root>

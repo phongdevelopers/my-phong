@@ -1,0 +1,8 @@
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\User\Desktop\sourcecode.jpg\CommerceBuilder\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Ebooks\sourcecode.jpg\CommerceBuilder\obj\Debug\ResolveAssemblyReference.cache
+D:\Ebooks\sourcecode.jpg\CommerceBuilder\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Ebooks\sourcecode.jpg\CommerceBuilder\obj\Debug\ResGen.read.1.tlog
+D:\Ebooks\sourcecode.jpg\CommerceBuilder\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Ebooks\sourcecode.jpg\CommerceBuilder\obj\Debug\ResGen.write.1.tlog

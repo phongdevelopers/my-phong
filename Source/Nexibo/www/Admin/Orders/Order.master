@@ -1,0 +1,17 @@
+<%@ Master Language="C#" MasterPageFile="../Admin.master" %>
+<%@ Register Src="OrderMenu.ascx" TagName="OrderMenu" TagPrefix="uc5" %>
+<asp:Content ID="OrderContent" runat="server" ContentPlaceHolderID="MainContent">
+    <table class="innerLayout" width="100%">
+        <tr>
+            <td class="menuPanel" valign="top">
+                <uc5:OrderMenu ID="OrderMenu1" runat="server" />
+                <asp:ContentPlaceHolder ID="PrimarySidebarContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="innerLayoutContent" valign="top">
+                <asp:contentplaceholder ID="MainContent" runat="server">
+                </asp:contentplaceholder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
