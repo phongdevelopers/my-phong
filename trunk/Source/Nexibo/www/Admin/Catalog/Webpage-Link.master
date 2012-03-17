@@ -1,0 +1,18 @@
+<%@ Master Language="C#" MasterPageFile="~/Admin/Admin.master" %>
+
+
+<asp:Content ID="MainContent1" runat="server" ContentPlaceHolderID="MainContent">
+    <table class="innerLayout" width="100%">
+        <tr>
+            <td class="menuPanel" valign="top">
+                <asp:ContentPlaceHolder ID="PrimarySidebarContent" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="innerLayoutContent" valign="top">
+                <asp:contentplaceholder ID="MainContent" runat="server">
+                </asp:contentplaceholder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="2.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{345D3B04-18E3-44C6-8098-82CAFE0565D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommerceBuilder</RootNamespace>
+    <AssemblyName>CommerceBuilder</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSYS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommerceBuilder.AbleCommerceTax, Version=7.2.11310.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CommerceBuilder.Configuration, Version=7.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommerceBuilder.Data, Version=7.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommerceBuilder.GoogleCheckout, Version=7.0.10052.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.1.271, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>..\Website\Bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>..\Website\Bin</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Validators, Version=1.0.0.0, Culture=neutral, PublicKeyToken=08d88f24895e085d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Validators.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalog\CatalogableBase.cs" />
+    <Compile Include="Catalog\CatalogNodeCollection.Generated.cs" />
+    <Compile Include="Catalog\CategoryCollection.Generated.cs" />
+    <Compile Include="Catalog\CategoryLevelNodeCollection.cs" />
+    <Compile Include="Catalog\CategoryParentCollection.Generated.cs" />
+    <Compile Include="Catalog\CatalogVisibility.cs" />
+    <Compile Include="Catalog\CategoryParentNode.cs" />
+    <Compile Include="Catalog\CustomUrl.cs" />
+    <Compile Include="Catalog\CustomUrl.Generated.cs" />
+    <Compile Include="Catalog\CustomUrlCollection.Generated.cs" />
+    <Compile Include="Catalog\CustomUrlDataSource.cs" />
+    <Compile Include="Catalog\CustomUrlDataSource.Generated.cs" />
+    <Compile Include="Catalog\DefaultUrlGenerator.cs" />
+    <Compile Include="Catalog\DefaultUrlRewriter.cs" />
+    <Compile Include="Catalog\IUrlGenerator.cs" />
+    <Compile Include="Catalog\IUrlRewriter.cs" />
+    <Compile Include="Catalog\LinkCategoryCollection.cs" />
+    <Compile Include="Catalog\LinkCollection.Generated.cs" />
+    <Compile Include="Catalog\UrlGenerator.cs" />
+    <Compile Include="Catalog\UrlRewriterBase.cs" />
+    <Compile Include="Catalog\WebpageCategoryCollection.cs" />
+    <Compile Include="Catalog\WebpageCollection.Generated.cs" />
+    <Compile Include="Common\FilterRule.cs" />
+    <Compile Include="Common\IntegerList.cs" />
+    <Compile Include="Common\UrlEncodedDictionary.cs" />
+    <Compile Include="Common\LSDecimal.cs" />
+    <Compile Include="Common\Strings.cs" />
+    <Compile Include="DataFeeds\FeedOperationStatus.cs" />
+    <Compile Include="DataFeeds\FeedStatusContainer.cs" />
+    <Compile Include="DigitalDelivery\AcquireSerialKeyResponse.cs" />
+    <Compile Include="DigitalDelivery\ActivationMode.cs" />
+    <Compile Include="DigitalDelivery\FulfillmentMode.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGoodCollection.cs" />
+    <Compile Include="DigitalDelivery\DefaultSerialKeyProvider.cs" />
+    <Compile Include="DigitalDelivery\ISerialKeyProvider.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGood.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGood.Generated.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGoodCollection.Generated.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGoodDataSource.cs" />
+    <Compile Include="DigitalDelivery\ProductDigitalGoodDataSource.Generated.cs" />
+    <Compile Include="DigitalDelivery\SerialKey.cs" />
+    <Compile Include="DigitalDelivery\SerialKey.Generated.cs" />
+    <Compile Include="DigitalDelivery\SerialKeyCollection.Generated.cs" />
+    <Compile Include="DigitalDelivery\SerialKeyDataSource.cs" />
+    <Compile Include="DigitalDelivery\SerialKeyDataSource.Generated.cs" />
+    <Compile Include="DigitalDelivery\SerialKeyProviderBase.cs" />
+    <Compile Include="DigitalDelivery\SerialKeyProviderDataSource.cs" />
+    <Compile Include="Exceptions\SecurityException.cs" />
+    <Compile Include="Marketing\CouponGroup.cs" />
+    <Compile Include="Marketing\CouponGroup.Generated.cs" />
+    <Compile Include="Marketing\CouponGroupCollection.Generated.cs" />
+    <Compile Include="Marketing\CouponGroupDataSource.cs" />
+    <Compile Include="Marketing\CouponGroupDataSource.Generated.cs" />
+    <Compile Include="Marketing\AffiliateReferralPeriod.cs" />
+    <Compile Include="Marketing\ReferralRule.cs" />
+    <Compile Include="Marketing\VolumeDiscountGroup.cs" />
+    <Compile Include="Marketing\VolumeDiscountGroup.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountGroupCollection.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountGroupDataSource.cs" />
+    <Compile Include="Marketing\VolumeDiscountGroupDataSource.Generated.cs" />
+    <Compile Include="Messaging\MailMergeTemplate.cs" />
+    <Compile Include="Messaging\MailAddressHelper.cs" />
+    <Compile Include="Messaging\MailMergeRecipient.cs" />
+    <Compile Include="Messaging\MailMergeRecipientCollection.cs" />
+    <Compile Include="Messaging\NVelocityEngine.cs" />
+    <Compile Include="Messaging\SmtpSettings.cs" />
+    <Compile Include="Orders\BasketPaymentItem.cs" />
+    <Compile Include="Orders\CheckoutHelper.cs" />
+    <Compile Include="Orders\OrderTotalsSummary.cs" />
+    <Compile Include="Orders\InventoryStatus.cs" />
+    <Compile Include="Payments\DefaultGiftCertKeyProvider.cs" />
+    <Compile Include="Payments\GiftCertificateStatus.cs" />
+    <Compile Include="Payments\IGiftCertKeyProvider.cs" />
+    <Compile Include="Payments\PaymentMethodGroup.cs" />
+    <Compile Include="Payments\PaymentMethodGroup.Generated.cs" />
+    <Compile Include="Payments\PaymentMethodGroupCollection.Generated.cs" />
+    <Compile Include="Payments\PaymentMethodGroupDataSource.cs" />
+    <Compile Include="Payments\PaymentMethodGroupDataSource.Generated.cs" />
+    <Compile Include="Payments\Providers\GiftCertificatePaymentProvider.cs" />
+    <Compile Include="Payments\Providers\PaymentProviderDataSource.cs" />
+    <Compile Include="Personalization\PersonalizationBlobDecoder.cs" />
+    <Compile Include="Personalization\PersonalizationInfo.cs" />
+    <Compile Include="Personalization\PersonalizationProvider.cs" />
+    <Compile Include="Products\CrossSellState.cs" />
+    <Compile Include="Products\Kit.Generated.cs" />
+    <Compile Include="Products\KitCollection.Generated.cs" />
+    <Compile Include="Products\KitDataSource.Generated.cs" />
+    <Compile Include="Products\Option.cs" />
+    <Compile Include="Products\Option.Generated.cs" />
+    <Compile Include="Products\OptionChoice.cs" />
+    <Compile Include="Products\OptionChoice.Generated.cs" />
+    <Compile Include="Products\OptionChoiceCollection.Generated.cs" />
+    <Compile Include="Products\OptionChoiceDataSource.cs" />
+    <Compile Include="Products\OptionChoiceDataSource.Generated.cs" />
+    <Compile Include="Products\OptionCollection.Generated.cs" />
+    <Compile Include="Products\OptionDataSource.cs" />
+    <Compile Include="Products\OptionDataSource.Generated.cs" />
+    <Compile Include="Products\ProductCustomField.cs" />
+    <Compile Include="Products\ProductCustomField.Generated.cs" />
+    <Compile Include="Products\ProductCustomFieldCollection.Generated.cs" />
+    <Compile Include="Products\ProductCustomFieldDataSource.cs" />
+    <Compile Include="Products\ProductCustomFieldDataSource.Generated.cs" />
+    <Compile Include="Products\ProductOption.cs" />
+    <Compile Include="Products\ProductOption.Generated.cs" />
+    <Compile Include="Products\ProductOptionCollection.Generated.cs" />
+    <Compile Include="Products\ProductOptionDataSource.cs" />
+    <Compile Include="Products\ProductOptionDataSource.Generated.cs" />
+    <Compile Include="Products\ProductProductTemplate.cs" />
+    <Compile Include="Products\ProductProductTemplate.Generated.cs" />
+    <Compile Include="Products\ProductProductTemplateCollection.Generated.cs" />
+    <Compile Include="Products\ProductProductTemplateDataSource.cs" />
+    <Compile Include="Products\ProductProductTemplateDataSource.Generated.cs" />
+    <Compile Include="Products\ProductReviewHelper.cs" />
+    <Compile Include="Products\ProductTemplateField.cs" />
+    <Compile Include="Products\ProductTemplateField.Generated.cs" />
+    <Compile Include="Products\ProductTemplateFieldCollection.Generated.cs" />
+    <Compile Include="Products\ProductTemplateFieldDataSource.cs" />
+    <Compile Include="Products\ProductTemplateFieldDataSource.Generated.cs" />
+    <Compile Include="Products\RelatedProduct.cs" />
+    <Compile Include="Products\RelatedProduct.Generated.cs" />
+    <Compile Include="Products\RelatedProductCollection.Generated.cs" />
+    <Compile Include="Products\RelatedProductDataSource.cs" />
+    <Compile Include="Products\RelatedProductDataSource.Generated.cs" />
+    <Compile Include="Products\SpecialGroup.cs" />
+    <Compile Include="Products\SpecialGroup.Generated.cs" />
+    <Compile Include="Products\SpecialGroupCollection.Generated.cs" />
+    <Compile Include="Products\SpecialGroupDataSource.cs" />
+    <Compile Include="Products\SpecialGroupDataSource.Generated.cs" />
+    <Compile Include="Products\UpsellProduct.cs" />
+    <Compile Include="Products\UpsellProduct.Generated.cs" />
+    <Compile Include="Products\UpsellProductCollection.Generated.cs" />
+    <Compile Include="Products\UpsellProductDataSource.cs" />
+    <Compile Include="Products\UpsellProductDataSource.Generated.cs" />
+    <Compile Include="Products\VendorGroup.cs" />
+    <Compile Include="Products\VendorGroup.Generated.cs" />
+    <Compile Include="Products\VendorGroupCollection.Generated.cs" />
+    <Compile Include="Products\VendorGroupDataSource.cs" />
+    <Compile Include="Products\VendorGroupDataSource.Generated.cs" />
+    <Compile Include="Properties\Resources.en-US.Designer.cs">
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reporting\PurchaseTotalSummary.cs" />
+    <Compile Include="Search\FTSQueryParser.cs" />
+    <Compile Include="Search\IdRangeParser.cs" />
+    <Compile Include="Reporting\ProductBreakdownSummary.cs" />
+    <Compile Include="Reporting\PurchaseSummary.cs" />
+    <Compile Include="Reporting\ReferrerSalesSummary.cs" />
+    <Compile Include="Reporting\TaxReportDataSource.cs" />
+    <Compile Include="Reporting\TaxReportDetailItem.cs" />
+    <Compile Include="Reporting\TaxReportSummaryItem.cs" />
+    <Compile Include="Search\KeywordCriterion.cs" />
+    <Compile Include="Search\KeywordSearchHelper.cs" />
+    <Compile Include="Search\OrderFilter.cs" />
+    <Compile Include="Search\OrderFilterDataSource.cs" />
+    <Compile Include="Search\SearchAreaResults.cs" />
+    <Compile Include="Search\SearchDataSource.cs" />
+    <Compile Include="Search\SearchResult.cs" />
+    <Compile Include="Search\StopWordsParser.cs" />
+    <Compile Include="Seo\IRedirectService.cs" />
+    <Compile Include="Seo\Redirect.cs" />
+    <Compile Include="Seo\Redirect.Generated.cs" />
+    <Compile Include="Seo\RedirectCollection.Generated.cs" />
+    <Compile Include="Seo\RedirectDataSource.cs" />
+    <Compile Include="Seo\RedirectDataSource.Generated.cs" />
+    <Compile Include="Seo\RedirectService.cs" />
+    <Compile Include="Seo\RedirectServiceLocator.cs" />
+    <Compile Include="Seo\RewriteServiceLocator.cs" />
+    <Compile Include="Shipping\Providers\AddressValidatorServiceBase.cs" />
+    <Compile Include="Shipping\Providers\AddressValidatorServiceLocator.cs" />
+    <Compile Include="Shipping\Providers\IAddressValidatorService.cs" />
+    <Compile Include="Shipping\Providers\TrackingResultType.cs" />
+    <Compile Include="Shipping\ShipMethodGroup.cs" />
+    <Compile Include="Shipping\ShipMethodGroup.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodGroupCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodGroupDataSource.cs" />
+    <Compile Include="Shipping\ShipMethodGroupDataSource.Generated.cs" />
+    <Compile Include="Stores\AuditEvent.cs" />
+    <Compile Include="Stores\AuditEvent.Generated.cs" />
+    <Compile Include="Stores\AuditEventCollection.Generated.cs" />
+    <Compile Include="Stores\AuditEventDataSource.cs" />
+    <Compile Include="Stores\AuditEventDataSource.Generated.cs" />
+    <Compile Include="Stores\ScriptletType.cs" />
+    <Compile Include="Stores\ForexProviderBase.cs" />
+    <Compile Include="Stores\ForexProviderDataSource.cs" />
+    <Compile Include="Stores\IForexProvider.cs" />
+    <Compile Include="Stores\Scriptlet.cs" />
+    <Compile Include="Stores\ScriptletCollection.cs" />
+    <Compile Include="Stores\ScriptletDataSource.cs" />
+    <Compile Include="Search\SearchArea.cs" />
+    <Compile Include="Stores\StoreClosureType.cs" />
+    <Compile Include="Taxes\TaxShoppingDisplay.cs" />
+    <Compile Include="Taxes\Providers\TaxProviderDataSource.cs" />
+    <Compile Include="Taxes\RoundingRule.cs" />
+    <Compile Include="Taxes\TaxAddress.cs" />
+    <Compile Include="Taxes\TaxHelper.cs" />
+    <Compile Include="Taxes\TaxInfo.cs" />
+    <Compile Include="Taxes\TaxInvoiceDisplay.cs" />
+    <Compile Include="Taxes\TaxNexus.cs" />
+    <Compile Include="Taxes\TaxRuleGroup.cs" />
+    <Compile Include="Taxes\TaxRuleGroup.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleGroupCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleGroupDataSource.cs" />
+    <Compile Include="Taxes\TaxRuleGroupDataSource.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleShipZone.cs" />
+    <Compile Include="Taxes\TaxRuleShipZone.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleShipZoneCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleShipZoneDataSource.cs" />
+    <Compile Include="Taxes\TaxRuleShipZoneDataSource.Generated.cs" />
+    <Compile Include="Users\CustomerPasswordPolicy.cs" />
+    <Compile Include="Users\MerchantPasswordPolicy.cs" />
+    <Compile Include="Users\PasswordPolicy.cs" />
+    <Compile Include="Users\Group.cs" />
+    <Compile Include="Users\Group.Generated.cs" />
+    <Compile Include="Users\GroupCollection.Generated.cs" />
+    <Compile Include="Users\GroupDataSource.cs" />
+    <Compile Include="Users\GroupDataSource.Generated.cs" />
+    <Compile Include="Users\GroupRole.cs" />
+    <Compile Include="Users\GroupRole.Generated.cs" />
+    <Compile Include="Users\GroupRoleCollection.Generated.cs" />
+    <Compile Include="Users\GroupRoleDataSource.cs" />
+    <Compile Include="Users\GroupRoleDataSource.Generated.cs" />
+    <Compile Include="Users\PasswordTestResult.cs" />
+    <Compile Include="Users\RoleCache.cs" />
+    <Compile Include="Users\UserAuthFilter.cs" />
+    <Compile Include="Common\BitFieldState.cs" />
+    <Compile Include="DataFeeds\FeedOptions.cs" />
+    <Compile Include="DataFeeds\FeedProviderBase.cs" />
+    <Compile Include="DataFeeds\GoogleBaseOptionKeys.cs" />
+    <Compile Include="DataFeeds\IFeedOptionKeys.cs" />
+    <Compile Include="DataFeeds\GoogleBase.cs" />
+    <Compile Include="DataFeeds\IFeedProvider.cs" />
+    <Compile Include="DataFeeds\ShoppingComFeed.cs" />
+    <Compile Include="DataFeeds\ShoppingComOptionKeys.cs" />
+    <Compile Include="DataFeeds\YahooFeedOptionKeys.cs" />
+    <Compile Include="DataFeeds\YahooShoppingFeed.cs" />
+    <Compile Include="Common\GenericComparer.cs" />
+    <Compile Include="Common\SortableCollection.cs" />
+    <Compile Include="DigitalDelivery\DigitalGoodCollection.Generated.cs" />
+    <Compile Include="DigitalDelivery\DownloadCollection.Generated.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreementCollection.Generated.cs" />
+    <Compile Include="DigitalDelivery\ReadmeCollection.Generated.cs" />
+    <Compile Include="Marketing\AffiliateCollection.Generated.cs" />
+    <Compile Include="Marketing\CategoryVolumeDiscountCollection.Generated.cs" />
+    <Compile Include="Marketing\CouponCollection.Generated.cs" />
+    <Compile Include="Marketing\CouponComboCollection.Generated.cs" />
+    <Compile Include="Marketing\CouponProductCollection.Generated.cs" />
+    <Compile Include="Marketing\CouponShipMethodCollection.Generated.cs" />
+    <Compile Include="Marketing\EmailList.cs" />
+    <Compile Include="Marketing\EmailList.Generated.cs" />
+    <Compile Include="Marketing\EmailListCollection.Generated.cs" />
+    <Compile Include="Marketing\EmailListDataSource.cs" />
+    <Compile Include="Marketing\EmailListDataSource.Generated.cs" />
+    <Compile Include="Marketing\EmailListSignup.cs" />
+    <Compile Include="Marketing\EmailListSignup.Generated.cs" />
+    <Compile Include="Marketing\EmailListSignupCollection.Generated.cs" />
+    <Compile Include="Marketing\EmailListSignupDataSource.cs" />
+    <Compile Include="Marketing\EmailListSignupDataSource.Generated.cs" />
+    <Compile Include="Marketing\EmailListSignupRule.cs" />
+    <Compile Include="Marketing\EmailListUser.cs" />
+    <Compile Include="Marketing\EmailListUser.Generated.cs" />
+    <Compile Include="Marketing\EmailListUserCollection.Generated.cs" />
+    <Compile Include="Marketing\EmailListUserDataSource.cs" />
+    <Compile Include="Marketing\EmailListUserDataSource.Generated.cs" />
+    <Compile Include="Marketing\ProductVolumeDiscountCollection.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountCollection.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountLevelCollection.Generated.cs" />
+    <Compile Include="Users\UserSearchCriteria.cs" />
+    <Compile Include="Utility\DownloadHelper.cs" />
+    <Compile Include="Utility\FtpClient.cs" />
+    <Compile Include="Utility\HttpClient.cs" />
+    <Compile Include="Utility\HttpContextHelper.cs" />
+    <Compile Include="Utility\ImageQuantization\OctreeQuantizer.cs" />
+    <Compile Include="Utility\ImageQuantization\Quantizer.cs" />
+    <Compile Include="Utility\Misc.cs" />
+    <Compile Include="Utility\RecryptionHelper.cs" />
+    <Compile Include="Utility\SecUtility.cs" />
+    <Compile Include="Catalog\CatalogNodeCollection.cs" />
+    <Compile Include="Catalog\CatalogNodeSiteMapProvider.cs" />
+    <Compile Include="Catalog\ICatalogable.cs" />
+    <Compile Include="Common\PersistableEventArgs.cs" />
+    <Compile Include="Common\PersistableEventHandler.cs" />
+    <Compile Include="DigitalDelivery\DigitalGood.cs" />
+    <Compile Include="DigitalDelivery\DigitalGood.Generated.cs" />
+    <Compile Include="DigitalDelivery\DigitalGoodDataSource.cs" />
+    <Compile Include="DigitalDelivery\DigitalGoodDataSource.Generated.cs" />
+    <Compile Include="DigitalDelivery\DownloadStatus.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreementMode.cs" />
+    <Compile Include="Marketing\CategoryVolumeDiscount.cs" />
+    <Compile Include="Marketing\CategoryVolumeDiscount.Generated.cs" />
+    <Compile Include="Marketing\CategoryVolumeDiscountDataSource.cs" />
+    <Compile Include="Marketing\CategoryVolumeDiscountDataSource.Generated.cs" />
+    <Compile Include="Marketing\CouponCalculator.cs" />
+    <Compile Include="Marketing\CouponRule.cs" />
+    <Compile Include="Marketing\CouponCombo.cs" />
+    <Compile Include="Marketing\CouponCombo.Generated.cs" />
+    <Compile Include="Marketing\CouponShipMethod.cs" />
+    <Compile Include="Marketing\CouponShipMethod.Generated.cs" />
+    <Compile Include="Marketing\CouponShipMethodDataSource.cs" />
+    <Compile Include="Marketing\CouponShipMethodDataSource.Generated.cs" />
+    <Compile Include="Marketing\CouponType.cs" />
+    <Compile Include="Marketing\DiscountCalculator.cs" />
+    <Compile Include="Marketing\ProductVolumeDiscount.cs" />
+    <Compile Include="Marketing\ProductVolumeDiscount.Generated.cs" />
+    <Compile Include="Marketing\ProductVolumeDiscountDataSource.cs" />
+    <Compile Include="Marketing\ProductVolumeDiscountDataSource.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountMode.cs" />
+    <Compile Include="Messaging\EmailTemplateCollection.Generated.cs" />
+    <Compile Include="Messaging\EmailTemplateTriggerCollection.Generated.cs" />
+    <Compile Include="Orders\BasketCollection.Generated.cs" />
+    <Compile Include="Orders\BasketCoupon.cs" />
+    <Compile Include="Orders\BasketCoupon.Generated.cs" />
+    <Compile Include="Orders\BasketCouponCollection.Generated.cs" />
+    <Compile Include="Orders\BasketCouponDataSource.cs" />
+    <Compile Include="Orders\BasketCouponDataSource.Generated.cs" />
+    <Compile Include="Orders\BasketItemCollection.Generated.cs" />
+    <Compile Include="Orders\BasketItemComparer.cs" />
+    <Compile Include="Orders\BasketItemInput.cs" />
+    <Compile Include="Orders\BasketItemInput.Generated.cs" />
+    <Compile Include="Orders\BasketItemInputCollection.Generated.cs" />
+    <Compile Include="Orders\BasketItemInputDataSource.cs" />
+    <Compile Include="Orders\BasketItemInputDataSource.Generated.cs" />
+    <Compile Include="Orders\BasketItemInventory.cs" />
+    <Compile Include="Orders\BasketItemLicenseAgreementCollection.cs" />
+    <Compile Include="Orders\BasketShipmentCollection.cs" />
+    <Compile Include="Orders\BasketShipmentCollection.Generated.cs" />
+    <Compile Include="Orders\CheckoutResponse.cs" />
+    <Compile Include="Orders\OrderItemComparer.cs" />
+    <Compile Include="Orders\GiftWrapCalculator.cs" />
+    <Compile Include="Orders\InvalidOrderException.cs" />
+    <Compile Include="Orders\NoteType.cs" />
+    <Compile Include="Orders\OrderCollection.Generated.cs" />
+    <Compile Include="Orders\OrderCouponCollection.Generated.cs" />
+    <Compile Include="Orders\OrderItemCollection.cs" />
+    <Compile Include="Orders\OrderItemCollection.Generated.cs" />
+    <Compile Include="Orders\OrderItemDigitalGood.cs" />
+    <Compile Include="Orders\OrderItemDigitalGood.Generated.cs" />
+    <Compile Include="Orders\OrderItemDigitalGoodCollection.Generated.cs" />
+    <Compile Include="Orders\OrderItemDigitalGoodDataSource.cs" />
+    <Compile Include="Orders\OrderItemDigitalGoodDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderItemInput.cs" />
+    <Compile Include="Orders\OrderItemInput.Generated.cs" />
+    <Compile Include="Orders\OrderItemInputCollection.Generated.cs" />
+    <Compile Include="Orders\OrderItemInputDataSource.cs" />
+    <Compile Include="Orders\OrderItemInputDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderNoteCollection.Generated.cs" />
+    <Compile Include="Orders\OrderPullItem.cs" />
+    <Compile Include="Orders\OrderPullItemCollection.cs" />
+    <Compile Include="Orders\OrderPullItemDataSource.cs" />
+    <Compile Include="Orders\OrderShipmentCollection.Generated.cs" />
+    <Compile Include="Orders\OrderStatusActionCollection.Generated.cs" />
+    <Compile Include="Orders\OrderStatusCollection.Generated.cs" />
+    <Compile Include="Orders\OrderStatusEmailCollection.Generated.cs" />
+    <Compile Include="Orders\OrderStatusTriggerCollection.Generated.cs" />
+    <Compile Include="Orders\OrderPaymentStatus.cs" />
+    <Compile Include="Orders\OrderShipmentStatus.cs" />
+    <Compile Include="Orders\Subscription.cs" />
+    <Compile Include="Orders\Subscription.Generated.cs" />
+    <Compile Include="Orders\SubscriptionCollection.Generated.cs" />
+    <Compile Include="Orders\SubscriptionDataSource.cs" />
+    <Compile Include="Orders\SubscriptionDataSource.Generated.cs" />
+    <Compile Include="Orders\TrackingNumberCollection.Generated.cs" />
+    <Compile Include="Payments\AuthorizeRecurringTransactionResponse.cs" />
+    <Compile Include="Payments\BaseTransactionRequest.cs" />
+    <Compile Include="Payments\AuthorizeRecurringTransactionRequest.cs" />
+    <Compile Include="Payments\CancelRecurringTransactionRequest.cs" />
+    <Compile Include="Payments\GiftCertificate.cs" />
+    <Compile Include="Payments\GiftCertificate.Generated.cs" />
+    <Compile Include="Payments\GiftCertificateCollection.Generated.cs" />
+    <Compile Include="Payments\GiftCertificateDataSource.cs" />
+    <Compile Include="Payments\GiftCertificateDataSource.Generated.cs" />
+    <Compile Include="Payments\GiftCertificateTransaction.cs" />
+    <Compile Include="Payments\GiftCertificateTransaction.Generated.cs" />
+    <Compile Include="Payments\GiftCertificateTransactionCollection.Generated.cs" />
+    <Compile Include="Payments\GiftCertificateTransactionDataSource.cs" />
+    <Compile Include="Payments\GiftCertificateTransactionDataSource.Generated.cs" />
+    <Compile Include="Payments\ITransactionRequest.cs" />
+    <Compile Include="Payments\PaymentCollection.Generated.cs" />
+    <Compile Include="Payments\PaymentEngine.cs" />
+    <Compile Include="Payments\PaymentGatewayCollection.Generated.cs" />
+    <Compile Include="Payments\AccountDataDictionary.cs" />
+    <Compile Include="Payments\PaymentMethodCollection.Generated.cs" />
+    <Compile Include="Payments\PaymentStatusHelper.cs" />
+    <Compile Include="Payments\Providers\SupportedTransactions.cs" />
+    <Compile Include="Payments\TransactionCollection.Generated.cs" />
+    <Compile Include="Payments\TransactionStatus.cs" />
+    <Compile Include="Personalization\PersonalizationPathCollection.Generated.cs" />
+    <Compile Include="Personalization\ProfileCollection.Generated.cs" />
+    <Compile Include="Personalization\SharedPersonalizationCollection.Generated.cs" />
+    <Compile Include="Personalization\UserPersonalizationCollection.Generated.cs" />
+    <Compile Include="Products\InheritanceMode.cs" />
+    <Compile Include="Products\InputChoice.cs" />
+    <Compile Include="Products\InputChoice.Generated.cs" />
+    <Compile Include="Products\InputChoiceCollection.Generated.cs" />
+    <Compile Include="Products\InputChoiceDataSource.cs" />
+    <Compile Include="Products\InputChoiceDataSource.Generated.cs" />
+    <Compile Include="Products\InputField.cs" />
+    <Compile Include="Products\InputField.Generated.cs" />
+    <Compile Include="Products\InputFieldCollection.Generated.cs" />
+    <Compile Include="Products\InputFieldDataSource.cs" />
+    <Compile Include="Products\InputFieldDataSource.Generated.cs" />
+    <Compile Include="Products\InventoryManager.cs" />
+    <Compile Include="Products\KitComponentCollection.Generated.cs" />
+    <Compile Include="Products\KitProductCollection.Generated.cs" />
+    <Compile Include="Products\ManufacturerCollection.Generated.cs" />
+    <Compile Include="Products\ModifierMode.cs" />
+    <Compile Include="Products\PaymentFrequencyUnit.cs" />
+    <Compile Include="Products\ProductAssetCollection.Generated.cs" />
+    <Compile Include="Products\ProductCollection.Generated.cs" />
+    <Compile Include="Products\ProductImageCollection.Generated.cs" />
+    <Compile Include="Products\ProductKitComponentCollection.Generated.cs" />
+    <Compile Include="Products\ProductReviewCollection.Generated.cs" />
+    <Compile Include="Products\ProductTemplate.cs" />
+    <Compile Include="Products\ProductTemplate.Generated.cs" />
+    <Compile Include="Products\ProductTemplateCollection.Generated.cs" />
+    <Compile Include="Products\ProductTemplateDataSource.cs" />
+    <Compile Include="Products\ProductTemplateDataSource.Generated.cs" />
+    <Compile Include="Products\ProductVariantCollection.Generated.cs" />
+    <Compile Include="Products\ReviewerProfile.cs" />
+    <Compile Include="Products\ReviewerProfile.Generated.cs" />
+    <Compile Include="Products\ReviewerProfileCollection.Generated.cs" />
+    <Compile Include="Products\ReviewerProfileDataSource.cs" />
+    <Compile Include="Products\ReviewerProfileDataSource.Generated.cs" />
+    <Compile Include="Products\SpecialCollection.Generated.cs" />
+    <Compile Include="Products\SubscriptionPlan.cs" />
+    <Compile Include="Products\SubscriptionPlan.Generated.cs" />
+    <Compile Include="Products\SubscriptionPlanCollection.Generated.cs" />
+    <Compile Include="Products\SubscriptionPlanDataSource.cs" />
+    <Compile Include="Products\SubscriptionPlanDataSource.Generated.cs" />
+    <Compile Include="Products\VendorCollection.Generated.cs" />
+    <Compile Include="Products\WrapGroupCollection.Generated.cs" />
+    <Compile Include="Products\WrapStyleCollection.Generated.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\AbandonedBasketsSummary.cs" />
+    <Compile Include="Reporting\BasketSummary.cs" />
+    <Compile Include="Reporting\AffiliateSalesSummary.cs" />
+    <Compile Include="Reporting\CouponSummary.cs" />
+    <Compile Include="Reporting\PageView.cs" />
+    <Compile Include="Reporting\PageView.Generated.cs" />
+    <Compile Include="Reporting\PageViewCollection.Generated.cs" />
+    <Compile Include="Reporting\PageViewDataSource.cs" />
+    <Compile Include="Reporting\PageViewDataSource.Generated.cs" />
+    <Compile Include="Reporting\ProductInventoryDetail.cs" />
+    <Compile Include="Reporting\ProductInventoryDataSource.cs" />
+    <Compile Include="Reporting\ProductSummary.cs" />
+    <Compile Include="Reporting\UserSummary.cs" />
+    <Compile Include="Reporting\OrderSummary.cs" />
+    <Compile Include="Reporting\SalesSummary.cs" />
+    <Compile Include="Reporting\ReportDataSource.cs" />
+    <Compile Include="Shipping\CountryCollection.Generated.cs" />
+    <Compile Include="Shipping\IShipment.cs" />
+    <Compile Include="Shipping\Providers\PackageList.cs" />
+    <Compile Include="Shipping\Providers\ProviderShipRateQuote.cs" />
+    <Compile Include="Shipping\Providers\ShippingProviderDataSource.cs" />
+    <Compile Include="Shipping\ProvinceCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipGatewayCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodShipZoneCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodWarehouseCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipRateMatrixCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneCountryCollection.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneProvinceCollection.Generated.cs" />
+    <Compile Include="Shipping\UpsOriginCollection.Generated.cs" />
+    <Compile Include="Shipping\WarehouseCollection.Generated.cs" />
+    <Compile Include="Stores\BannedIP.cs" />
+    <Compile Include="Stores\BannedIP.Generated.cs" />
+    <Compile Include="Stores\BannedIPCollection.Generated.cs" />
+    <Compile Include="Stores\BannedIPDataSource.cs" />
+    <Compile Include="Stores\BannedIPDataSource.Generated.cs" />
+    <Compile Include="Stores\CurrencyCollection.Generated.cs" />
+    <Compile Include="Stores\CustomFieldCollection.Generated.cs" />
+    <Compile Include="Stores\StoreCollection.Generated.cs" />
+    <Compile Include="Stores\StoreEventEngine.cs" />
+    <Compile Include="Orders\TrackingNumber.cs" />
+    <Compile Include="Orders\TrackingNumber.Generated.cs" />
+    <Compile Include="Orders\TrackingNumberDataSource.cs" />
+    <Compile Include="Orders\TrackingNumberDataSource.Generated.cs" />
+    <Compile Include="Payments\PaymentCollection.cs" />
+    <Compile Include="Payments\Transactions\TransactionOrigin.cs" />
+    <Compile Include="Products\InventoryMode.cs" />
+    <Compile Include="Products\KitInputType.cs" />
+    <Compile Include="Products\ProductAsset.cs" />
+    <Compile Include="Products\ProductAsset.Generated.cs" />
+    <Compile Include="Products\ProductAssetDataSource.cs" />
+    <Compile Include="Products\ProductAssetDataSource.Generated.cs" />
+    <Compile Include="Products\ProductCategoryCollection.cs" />
+    <Compile Include="Products\InvalidOptionsException.cs" />
+    <Compile Include="Messaging\EmailClient.cs" />
+    <Compile Include="Messaging\EmailTemplate.cs" />
+    <Compile Include="Messaging\EmailTemplate.Generated.cs" />
+    <Compile Include="Messaging\EmailTemplateDataSource.cs" />
+    <Compile Include="Messaging\EmailTemplateDataSource.Generated.cs" />
+    <Compile Include="Messaging\EmailTemplateTrigger.cs" />
+    <Compile Include="Messaging\EmailTemplateTrigger.Generated.cs" />
+    <Compile Include="Messaging\EmailTemplateTriggerDataSource.cs" />
+    <Compile Include="Messaging\EmailTemplateTriggerDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderAction.cs" />
+    <Compile Include="Orders\InventoryAction.cs" />
+    <Compile Include="Orders\OrderEventHandler.cs" />
+    <Compile Include="Orders\OrderItemType.cs" />
+    <Compile Include="Payments\PaymentGateway.cs" />
+    <Compile Include="Payments\PaymentGateway.Generated.cs" />
+    <Compile Include="Payments\PaymentGatewayDataSource.cs" />
+    <Compile Include="Payments\PaymentGatewayDataSource.Generated.cs" />
+    <Compile Include="Payments\TransactionCollection.cs" />
+    <Compile Include="Payments\CaptureTransactionRequest.cs" />
+    <Compile Include="Payments\RefundTransactionRequest.cs" />
+    <Compile Include="Payments\VoidTransactionRequest.cs" />
+    <Compile Include="Products\Kit.cs" />
+    <Compile Include="Products\KitComponent.cs" />
+    <Compile Include="Products\KitComponent.Generated.cs" />
+    <Compile Include="Products\KitComponentDataSource.cs" />
+    <Compile Include="Products\KitComponentDataSource.Generated.cs" />
+    <Compile Include="Products\KitDataSource.cs" />
+    <Compile Include="Products\KitPriceMode.cs" />
+    <Compile Include="Products\KitProduct.cs" />
+    <Compile Include="Products\KitProduct.Generated.cs" />
+    <Compile Include="Products\KitProductDataSource.cs" />
+    <Compile Include="Products\KitProductDataSource.Generated.cs" />
+    <Compile Include="Products\KitStatus.cs" />
+    <Compile Include="Products\KitWeightMode.cs" />
+    <Compile Include="Products\ProductCalculator.cs" />
+    <Compile Include="Products\ProductCategory.cs" />
+    <Compile Include="Products\ProductImage.cs" />
+    <Compile Include="Products\ProductImage.Generated.cs" />
+    <Compile Include="Products\ProductImageDataSource.cs" />
+    <Compile Include="Products\ProductImageDataSource.Generated.cs" />
+    <Compile Include="Products\InputType.cs" />
+    <Compile Include="Products\ProductKitComponent.cs" />
+    <Compile Include="Products\ProductKitComponent.Generated.cs" />
+    <Compile Include="Products\ProductKitComponentDataSource.cs" />
+    <Compile Include="Products\ProductKitComponentDataSource.Generated.cs" />
+    <Compile Include="Products\ProductReview.cs" />
+    <Compile Include="Products\ProductReview.Generated.cs" />
+    <Compile Include="Products\ProductReviewDataSource.cs" />
+    <Compile Include="Products\ProductReviewDataSource.Generated.cs" />
+    <Compile Include="Products\ProductVariant.cs" />
+    <Compile Include="Products\ProductVariant.Generated.cs" />
+    <Compile Include="Products\ProductVariantDataSource.cs" />
+    <Compile Include="Products\ProductVariantDataSource.Generated.cs" />
+    <Compile Include="Products\ProductVariantManager.cs" />
+    <Compile Include="Products\Special.cs" />
+    <Compile Include="Products\Special.Generated.cs" />
+    <Compile Include="Products\SpecialDataSource.cs" />
+    <Compile Include="Products\SpecialDataSource.Generated.cs" />
+    <Compile Include="Shipping\MeasurementUnit.cs" />
+    <Compile Include="Shipping\PostalCodeValidator.cs" />
+    <Compile Include="Shipping\Providers\IShippingProvider.cs" />
+    <Compile Include="Shipping\Providers\Package.cs" />
+    <Compile Include="Shipping\Providers\PackageManager.cs" />
+    <Compile Include="Shipping\Providers\ShippingProviderBase.cs" />
+    <Compile Include="Shipping\Providers\TrackingActivity.cs" />
+    <Compile Include="Shipping\Providers\TrackingPackage.cs" />
+    <Compile Include="Shipping\Providers\TrackingSummary.cs" />
+    <Compile Include="Shipping\Shippable.cs" />
+    <Compile Include="Shipping\ShipProviderException.cs" />
+    <Compile Include="Shipping\ShipRateQuoteDataSource.cs" />
+    <Compile Include="Shipping\ShipRateQuote.cs" />
+    <Compile Include="Shipping\ShipMethodShipZone.cs" />
+    <Compile Include="Shipping\ShipMethodShipZone.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodShipZoneDataSource.cs" />
+    <Compile Include="Shipping\ShipMethodShipZoneDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodType.cs" />
+    <Compile Include="Shipping\ShipMethodWarehouse.cs" />
+    <Compile Include="Shipping\ShipMethodWarehouse.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodWarehouseDataSource.cs" />
+    <Compile Include="Shipping\ShipMethodWarehouseDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipRateCalculator.cs" />
+    <Compile Include="Shipping\ShipRateMatrix.cs" />
+    <Compile Include="Shipping\ShipRateMatrix.Generated.cs" />
+    <Compile Include="Shipping\ShipRateMatrixDataSource.cs" />
+    <Compile Include="Shipping\ShipRateMatrixDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipZone.cs" />
+    <Compile Include="Shipping\ShipZone.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneCountry.cs" />
+    <Compile Include="Shipping\ShipZoneCountry.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneCountryDataSource.cs" />
+    <Compile Include="Shipping\ShipZoneCountryDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneDataSource.cs" />
+    <Compile Include="Shipping\ShipZoneDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneProvince.cs" />
+    <Compile Include="Shipping\ShipZoneProvince.Generated.cs" />
+    <Compile Include="Shipping\ShipZoneProvinceDataSource.cs" />
+    <Compile Include="Shipping\ShipZoneProvinceDataSource.Generated.cs" />
+    <Compile Include="Shipping\WeightUnit.cs" />
+    <Compile Include="Stores\OrderEventArgs.cs" />
+    <Compile Include="Stores\StoreEvent.cs" />
+    <Compile Include="Exceptions\TransactionException.cs" />
+    <Compile Include="Orders\BasketItemParentException.cs" />
+    <Compile Include="Orders\BasketItemType.cs" />
+    <Compile Include="Catalog\CatalogNode.cs" />
+    <Compile Include="Catalog\CatalogNode.Generated.cs" />
+    <Compile Include="Catalog\CatalogNodeDataSource.cs" />
+    <Compile Include="Catalog\CatalogNodeDataSource.Generated.cs" />
+    <Compile Include="Catalog\Category.cs" />
+    <Compile Include="Catalog\Category.Generated.cs" />
+    <Compile Include="Catalog\CategoryDataSource.cs" />
+    <Compile Include="Catalog\CategoryDataSource.Generated.cs" />
+    <Compile Include="Catalog\CategoryParent.cs" />
+    <Compile Include="Catalog\CategoryParent.Generated.cs" />
+    <Compile Include="Catalog\CategoryParentDataSource.cs" />
+    <Compile Include="Catalog\CategoryParentDataSource.Generated.cs" />
+    <Compile Include="Catalog\Link.cs" />
+    <Compile Include="Catalog\Link.Generated.cs" />
+    <Compile Include="Catalog\LinkDataSource.cs" />
+    <Compile Include="Catalog\LinkDataSource.Generated.cs" />
+    <Compile Include="Catalog\CatalogProductNode.cs" />
+    <Compile Include="Catalog\Webpage.cs" />
+    <Compile Include="Catalog\Webpage.Generated.cs" />
+    <Compile Include="Catalog\WebpageDataSource.cs" />
+    <Compile Include="Catalog\WebpageDataSource.Generated.cs" />
+    <Compile Include="Catalog\CatalogDataSource.cs" />
+    <Compile Include="Catalog\CatalogPathNode.cs" />
+    <Compile Include="Catalog\CatalogNodeType.cs" />
+    <Compile Include="Catalog\CmsPath.cs" />
+    <Compile Include="Catalog\CmsPathNode.cs" />
+    <Compile Include="Catalog\CmsSiteMapProvider.cs" />
+    <Compile Include="Exceptions\CommerceBuilderException.cs" />
+    <Compile Include="Common\PersistentDictionary.cs" />
+    <Compile Include="Common\PersistentCollection.cs" />
+    <Compile Include="Common\IPersistable.cs" />
+    <Compile Include="Common\NullableData.cs" />
+    <Compile Include="Common\SaveResult.cs" />
+    <Compile Include="Common\Token.cs" />
+    <Compile Include="DigitalDelivery\Download.cs" />
+    <Compile Include="DigitalDelivery\Download.Generated.cs" />
+    <Compile Include="DigitalDelivery\DownloadDataSource.cs" />
+    <Compile Include="DigitalDelivery\DownloadDataSource.Generated.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreement.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreement.Generated.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreementDataSource.cs" />
+    <Compile Include="DigitalDelivery\LicenseAgreementDataSource.Generated.cs" />
+    <Compile Include="DigitalDelivery\Readme.cs" />
+    <Compile Include="DigitalDelivery\Readme.Generated.cs" />
+    <Compile Include="DigitalDelivery\ReadmeDataSource.cs" />
+    <Compile Include="DigitalDelivery\ReadmeDataSource.Generated.cs" />
+    <Compile Include="Exceptions\CircularParentReference.cs" />
+    <Compile Include="Exceptions\InvalidCategoryException.cs" />
+    <Compile Include="Exceptions\InvalidLinkException.cs" />
+    <Compile Include="Exceptions\InvalidProductException.cs" />
+    <Compile Include="Exceptions\InvalidWebpageException.cs" />
+    <Compile Include="Marketing\Affiliate.cs" />
+    <Compile Include="Marketing\Affiliate.Generated.cs" />
+    <Compile Include="Marketing\AffiliateDataSource.cs" />
+    <Compile Include="Marketing\AffiliateDataSource.Generated.cs" />
+    <Compile Include="Marketing\Coupon.cs" />
+    <Compile Include="Marketing\Coupon.Generated.cs" />
+    <Compile Include="Marketing\CouponDataSource.cs" />
+    <Compile Include="Marketing\CouponDataSource.Generated.cs" />
+    <Compile Include="Marketing\CouponProduct.cs" />
+    <Compile Include="Marketing\CouponProduct.Generated.cs" />
+    <Compile Include="Marketing\CouponProductDataSource.cs" />
+    <Compile Include="Marketing\CouponProductDataSource.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscount.cs" />
+    <Compile Include="Marketing\VolumeDiscount.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountDataSource.cs" />
+    <Compile Include="Marketing\VolumeDiscountDataSource.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountLevel.cs" />
+    <Compile Include="Marketing\VolumeDiscountLevel.Generated.cs" />
+    <Compile Include="Marketing\VolumeDiscountLevelDataSource.cs" />
+    <Compile Include="Marketing\VolumeDiscountLevelDataSource.Generated.cs" />
+    <Compile Include="Orders\Basket.cs" />
+    <Compile Include="Orders\Basket.Generated.cs" />
+    <Compile Include="Orders\BasketDataSource.cs" />
+    <Compile Include="Orders\BasketDataSource.Generated.cs" />
+    <Compile Include="Orders\BasketItem.cs" />
+    <Compile Include="Orders\BasketItem.Generated.cs" />
+    <Compile Include="Orders\BasketItemCollection.cs" />
+    <Compile Include="Orders\BasketItemDataSource.cs" />
+    <Compile Include="Orders\BasketItemDataSource.Generated.cs" />
+    <Compile Include="Orders\BasketShipment.cs" />
+    <Compile Include="Orders\BasketShipment.Generated.cs" />
+    <Compile Include="Orders\BasketShipmentDataSource.cs" />
+    <Compile Include="Orders\BasketShipmentDataSource.Generated.cs" />
+    <Compile Include="Orders\CheckoutRequest.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Orders\Order.Generated.cs" />
+    <Compile Include="Orders\OrderCoupon.cs" />
+    <Compile Include="Orders\OrderCoupon.Generated.cs" />
+    <Compile Include="Orders\OrderCouponDataSource.cs" />
+    <Compile Include="Orders\OrderCouponDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderDataSource.cs" />
+    <Compile Include="Orders\OrderDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderItem.cs" />
+    <Compile Include="Orders\OrderItem.Generated.cs" />
+    <Compile Include="Orders\OrderItemDataSource.cs" />
+    <Compile Include="Orders\OrderItemDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderNote.cs" />
+    <Compile Include="Orders\OrderNote.Generated.cs" />
+    <Compile Include="Orders\OrderNoteDataSource.cs" />
+    <Compile Include="Orders\OrderNoteDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderShipment.cs" />
+    <Compile Include="Orders\OrderShipment.Generated.cs" />
+    <Compile Include="Orders\OrderShipmentDataSource.cs" />
+    <Compile Include="Orders\OrderShipmentDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderStatus.cs" />
+    <Compile Include="Orders\OrderStatus.Generated.cs" />
+    <Compile Include="Orders\OrderStatusAction.cs" />
+    <Compile Include="Orders\OrderStatusAction.Generated.cs" />
+    <Compile Include="Orders\OrderStatusActionDataSource.cs" />
+    <Compile Include="Orders\OrderStatusActionDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderStatusDataSource.cs" />
+    <Compile Include="Orders\OrderStatusDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderStatusEmail.cs" />
+    <Compile Include="Orders\OrderStatusEmail.Generated.cs" />
+    <Compile Include="Orders\OrderStatusEmailDataSource.cs" />
+    <Compile Include="Orders\OrderStatusEmailDataSource.Generated.cs" />
+    <Compile Include="Orders\OrderStatusTrigger.cs" />
+    <Compile Include="Orders\OrderStatusTrigger.Generated.cs" />
+    <Compile Include="Orders\OrderStatusTriggerDataSource.cs" />
+    <Compile Include="Orders\OrderStatusTriggerDataSource.Generated.cs" />
+    <Compile Include="Payments\PaymentGatewayProviderException.cs" />
+    <Compile Include="Payments\PaymentStatusException.cs" />
+    <Compile Include="Payments\TransactionType.cs" />
+    <Compile Include="Payments\Payment.cs" />
+    <Compile Include="Payments\Payment.Generated.cs" />
+    <Compile Include="Payments\PaymentDataSource.cs" />
+    <Compile Include="Payments\PaymentDataSource.Generated.cs" />
+    <Compile Include="Payments\PaymentMethod.cs" />
+    <Compile Include="Payments\PaymentMethod.Generated.cs" />
+    <Compile Include="Payments\PaymentMethodDataSource.cs" />
+    <Compile Include="Payments\PaymentMethodDataSource.Generated.cs" />
+    <Compile Include="Payments\PaymentStatus.cs" />
+    <Compile Include="Payments\Transaction.cs" />
+    <Compile Include="Payments\Transaction.Generated.cs" />
+    <Compile Include="Payments\TransactionDataSource.cs" />
+    <Compile Include="Payments\TransactionDataSource.Generated.cs" />
+    <Compile Include="Payments\AuthorizeTransactionRequest.cs" />
+    <Compile Include="Personalization\PersonalizationPath.cs" />
+    <Compile Include="Personalization\PersonalizationPath.Generated.cs" />
+    <Compile Include="Personalization\PersonalizationPathDataSource.cs" />
+    <Compile Include="Personalization\PersonalizationPathDataSource.Generated.cs" />
+    <Compile Include="Personalization\Profile.cs" />
+    <Compile Include="Personalization\Profile.Generated.cs" />
+    <Compile Include="Personalization\ProfileDataSource.cs" />
+    <Compile Include="Personalization\ProfileDataSource.Generated.cs" />
+    <Compile Include="Personalization\SharedPersonalization.cs" />
+    <Compile Include="Personalization\SharedPersonalization.Generated.cs" />
+    <Compile Include="Personalization\SharedPersonalizationDataSource.cs" />
+    <Compile Include="Personalization\SharedPersonalizationDataSource.Generated.cs" />
+    <Compile Include="Personalization\UserPersonalization.cs" />
+    <Compile Include="Personalization\UserPersonalization.Generated.cs" />
+    <Compile Include="Personalization\UserPersonalizationDataSource.cs" />
+    <Compile Include="Personalization\UserPersonalizationDataSource.Generated.cs" />
+    <Compile Include="Payments\Providers\PaymentProviderBase.cs" />
+    <Compile Include="Payments\PaymentInstrument.cs" />
+    <Compile Include="Payments\Providers\IPaymentProvider.cs" />
+    <Compile Include="Products\InvalidProductException.cs" />
+    <Compile Include="Products\Manufacturer.cs" />
+    <Compile Include="Products\Manufacturer.Generated.cs" />
+    <Compile Include="Products\ManufacturerDataSource.cs" />
+    <Compile Include="Products\ManufacturerDataSource.Generated.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\Product.Generated.cs" />
+    <Compile Include="Products\ProductDataSource.cs" />
+    <Compile Include="Products\ProductDataSource.Generated.cs" />
+    <Compile Include="Products\Vendor.cs" />
+    <Compile Include="Products\Vendor.Generated.cs" />
+    <Compile Include="Products\VendorDataSource.cs" />
+    <Compile Include="Products\VendorDataSource.Generated.cs" />
+    <Compile Include="Products\WrapGroup.cs" />
+    <Compile Include="Products\WrapGroup.Generated.cs" />
+    <Compile Include="Products\WrapGroupDataSource.cs" />
+    <Compile Include="Products\WrapGroupDataSource.Generated.cs" />
+    <Compile Include="Products\WrapStyle.cs" />
+    <Compile Include="Products\WrapStyle.Generated.cs" />
+    <Compile Include="Products\WrapStyleDataSource.cs" />
+    <Compile Include="Products\WrapStyleDataSource.Generated.cs" />
+    <Compile Include="Reporting\IdList.cs" />
+    <Compile Include="Reporting\MatchCriteria.cs" />
+    <Compile Include="Reporting\MatchType.cs" />
+    <Compile Include="Reporting\OrderSearchCriteria.cs" />
+    <Compile Include="Reporting\ProductSales.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\StringResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Tracing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tracing.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AbleCommerceRoleProvider.cs" />
+    <Compile Include="Users\MembershipProviderException.cs" />
+    <Compile Include="Users\UserGroup.cs" />
+    <Compile Include="Users\UserGroup.Generated.cs" />
+    <Compile Include="Users\UserGroupCollection.Generated.cs" />
+    <Compile Include="Users\UserGroupDataSource.cs" />
+    <Compile Include="Users\UserGroupDataSource.Generated.cs" />
+    <Compile Include="Users\UserPasswordHelper.cs" />
+    <Compile Include="Users\PersonalizationProviderException.cs" />
+    <Compile Include="Users\RoleProviderException.cs" />
+    <Compile Include="Users\UserCreateStatus.cs" />
+    <Compile Include="Shipping\Country.cs" />
+    <Compile Include="Shipping\Country.Generated.cs" />
+    <Compile Include="Shipping\CountryDataSource.cs" />
+    <Compile Include="Shipping\CountryDataSource.Generated.cs" />
+    <Compile Include="Shipping\Province.cs" />
+    <Compile Include="Shipping\Province.Generated.cs" />
+    <Compile Include="Shipping\ProvinceDataSource.cs" />
+    <Compile Include="Shipping\ProvinceDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipGateway.cs" />
+    <Compile Include="Shipping\ShipGateway.Generated.cs" />
+    <Compile Include="Shipping\ShipGatewayDataSource.cs" />
+    <Compile Include="Shipping\ShipGatewayDataSource.Generated.cs" />
+    <Compile Include="Shipping\ShipMethod.cs" />
+    <Compile Include="Shipping\ShipMethod.Generated.cs" />
+    <Compile Include="Shipping\ShipMethodDataSource.cs" />
+    <Compile Include="Shipping\ShipMethodDataSource.Generated.cs" />
+    <Compile Include="Shipping\UpsOrigin.cs" />
+    <Compile Include="Shipping\UpsOrigin.Generated.cs" />
+    <Compile Include="Shipping\UpsOriginDataSource.cs" />
+    <Compile Include="Shipping\UpsOriginDataSource.Generated.cs" />
+    <Compile Include="Shipping\Warehouse.cs" />
+    <Compile Include="Shipping\Warehouse.Generated.cs" />
+    <Compile Include="Shipping\WarehouseDataSource.cs" />
+    <Compile Include="Shipping\WarehouseDataSource.Generated.cs" />
+    <Compile Include="Stores\Currency.cs" />
+    <Compile Include="Stores\Currency.Generated.cs" />
+    <Compile Include="Stores\CurrencyDataSource.cs" />
+    <Compile Include="Stores\CurrencyDataSource.Generated.cs" />
+    <Compile Include="Stores\CustomField.cs" />
+    <Compile Include="Stores\CustomField.Generated.cs" />
+    <Compile Include="Stores\CustomFieldDataSource.cs" />
+    <Compile Include="Stores\CustomFieldDataSource.Generated.cs" />
+    <Compile Include="Stores\Store.cs" />
+    <Compile Include="Stores\Store.Generated.cs" />
+    <Compile Include="Stores\StoreDataSource.cs" />
+    <Compile Include="Stores\StoreDataSource.Generated.cs" />
+    <Compile Include="Stores\StoreSetting.cs" />
+    <Compile Include="Stores\StoreSetting.Generated.cs" />
+    <Compile Include="Stores\StoreSettingCollection.cs" />
+    <Compile Include="Stores\StoreSettingCollection.Generated.cs" />
+    <Compile Include="Stores\StoreSettingDataSource.cs" />
+    <Compile Include="Stores\StoreSettingDataSource.Generated.cs" />
+    <Compile Include="Taxes\Providers\ITaxProvider.cs" />
+    <Compile Include="Taxes\Providers\TaxProviderBase.cs" />
+    <Compile Include="Taxes\TaxCalculator.cs" />
+    <Compile Include="Taxes\TaxCode.cs" />
+    <Compile Include="Taxes\TaxCode.Generated.cs" />
+    <Compile Include="Taxes\TaxCodeCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxCodeDataSource.cs" />
+    <Compile Include="Taxes\TaxCodeDataSource.Generated.cs" />
+    <Compile Include="Taxes\TaxGateway.cs" />
+    <Compile Include="Taxes\TaxGateway.Generated.cs" />
+    <Compile Include="Taxes\TaxGatewayCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxGatewayDataSource.cs" />
+    <Compile Include="Taxes\TaxGatewayDataSource.Generated.cs" />
+    <Compile Include="Taxes\TaxRule.cs" />
+    <Compile Include="Taxes\TaxRule.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleDataSource.cs" />
+    <Compile Include="Taxes\TaxRuleDataSource.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleTaxCode.cs" />
+    <Compile Include="Taxes\TaxRuleTaxCode.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleTaxCodeCollection.Generated.cs" />
+    <Compile Include="Taxes\TaxRuleTaxCodeDataSource.cs" />
+    <Compile Include="Taxes\TaxRuleTaxCodeDataSource.Generated.cs" />
+    <Compile Include="Users\AbleCommerceMembershipProvider.cs" />
+    <Compile Include="Users\Address.cs" />
+    <Compile Include="Users\Address.Generated.cs" />
+    <Compile Include="Users\AddressCollection.Generated.cs" />
+    <Compile Include="Users\AddressDataSource.cs" />
+    <Compile Include="Users\AddressDataSource.Generated.cs" />
+    <Compile Include="Users\Role.cs" />
+    <Compile Include="Users\Role.Generated.cs" />
+    <Compile Include="Users\RoleCollection.Generated.cs" />
+    <Compile Include="Users\RoleDataSource.cs" />
+    <Compile Include="Users\RoleDataSource.Generated.cs" />
+    <Compile Include="Users\UserSettingCollection.cs" />
+    <Compile Include="Users\User.cs" />
+    <Compile Include="Users\User.Generated.cs" />
+    <Compile Include="Users\UserCollection.Generated.cs" />
+    <Compile Include="Users\UserDataSource.cs" />
+    <Compile Include="Users\UserDataSource.Generated.cs" />
+    <Compile Include="Users\UserPassword.cs" />
+    <Compile Include="Users\UserPassword.Generated.cs" />
+    <Compile Include="Users\UserPasswordCollection.Generated.cs" />
+    <Compile Include="Users\UserPasswordDataSource.cs" />
+    <Compile Include="Users\UserPasswordDataSource.Generated.cs" />
+    <Compile Include="Users\UserSetting.cs" />
+    <Compile Include="Users\UserSetting.Generated.cs" />
+    <Compile Include="Users\UserSettingCollection.Generated.cs" />
+    <Compile Include="Users\UserSettingDataSource.cs" />
+    <Compile Include="Users\UserSettingDataSource.Generated.cs" />
+    <Compile Include="Users\Wishlist.cs" />
+    <Compile Include="Users\Wishlist.Generated.cs" />
+    <Compile Include="Users\WishlistCollection.Generated.cs" />
+    <Compile Include="Users\WishlistDataSource.cs" />
+    <Compile Include="Users\WishlistDataSource.Generated.cs" />
+    <Compile Include="Users\WishlistItem.cs" />
+    <Compile Include="Users\WishlistItem.Generated.cs" />
+    <Compile Include="Users\WishlistItemCollection.cs" />
+    <Compile Include="Users\WishlistItemCollection.Generated.cs" />
+    <Compile Include="Users\WishlistItemDataSource.cs" />
+    <Compile Include="Users\WishlistItemDataSource.Generated.cs" />
+    <Compile Include="Users\WishlistItemInput.cs" />
+    <Compile Include="Users\WishlistItemInput.Generated.cs" />
+    <Compile Include="Users\WishlistItemInputCollection.Generated.cs" />
+    <Compile Include="Users\WishlistItemInputDataSource.cs" />
+    <Compile Include="Users\WishlistItemInputDataSource.Generated.cs" />
+    <Compile Include="Utility\AddressFormatter.cs" />
+    <Compile Include="Utility\AlwaysConvert.cs" />
+    <Compile Include="Utility\CacheWrapper.cs" />
+    <Compile Include="Utility\ContextCache.cs" />
+    <Compile Include="Utility\DatabaseHelper.cs" />
+    <Compile Include="Utility\EncryptionHelper.cs" />
+    <Compile Include="Utility\ErrorMessage.cs" />
+    <Compile Include="Utility\ErrorMessage.Generated.cs" />
+    <Compile Include="Utility\ErrorMessageCollection.Generated.cs" />
+    <Compile Include="Utility\ErrorMessageDataSource.cs" />
+    <Compile Include="Utility\ErrorMessageDataSource.Generated.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\IPLocation.cs" />
+    <Compile Include="Utility\IPLocation.Generated.cs" />
+    <Compile Include="Utility\IPLocationCollection.Generated.cs" />
+    <Compile Include="Utility\IPLocationDataSource.cs" />
+    <Compile Include="Utility\IPLocationDataSource.Generated.cs" />
+    <Compile Include="Utility\Logger.cs" />
+    <Compile Include="Utility\MaintenanceWorker.cs" />
+    <Compile Include="Utility\MessageSeverity.cs" />
+    <Compile Include="Utility\RandomNumbers.cs" />
+    <Compile Include="Utility\SessionFacade.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\LocaleHelper.cs" />
+    <Compile Include="Utility\UrlHelper.cs" />
+    <Compile Include="Utility\ValidationHelper.cs" />
+    <Compile Include="Utility\WebTrace.cs" />
+    <Compile Include="Utility\XmlUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StringResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Tracing.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Tracing.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

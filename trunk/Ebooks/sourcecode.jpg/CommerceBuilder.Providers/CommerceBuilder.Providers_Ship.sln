@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPS", "UPS\UPS.csproj", "{FD20981A-C2D0-4522-B994-5AD6CE80AC53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USPS", "USPS\USPS.csproj", "{620CA742-831D-49BB-8915-BC5C1652521A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FedEx", "FedEx\FedEx.csproj", "{B3E858A4-AF7C-4B8A-B12E-B4690C5F9D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanadaPost", "CanadaPost\CanadaPost.csproj", "{CE21148C-0B65-44E0-B761-F6E3331A366E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHLInternational", "DHLInternational\DHLInternational.csproj", "{3931FF3B-01BF-4156-BCA9-CC1A735D6699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AustraliaPost", "AustraliaPost\AustraliaPost.csproj", "{EA7BEBAC-7259-4DED-9B72-75387F7B140C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FedExWS", "FedExWS\FedExWS.csproj", "{40067C71-7889-437E-AFCE-4F8002F3C368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD20981A-C2D0-4522-B994-5AD6CE80AC53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD20981A-C2D0-4522-B994-5AD6CE80AC53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD20981A-C2D0-4522-B994-5AD6CE80AC53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD20981A-C2D0-4522-B994-5AD6CE80AC53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620CA742-831D-49BB-8915-BC5C1652521A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620CA742-831D-49BB-8915-BC5C1652521A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620CA742-831D-49BB-8915-BC5C1652521A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620CA742-831D-49BB-8915-BC5C1652521A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E858A4-AF7C-4B8A-B12E-B4690C5F9D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E858A4-AF7C-4B8A-B12E-B4690C5F9D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E858A4-AF7C-4B8A-B12E-B4690C5F9D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E858A4-AF7C-4B8A-B12E-B4690C5F9D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE21148C-0B65-44E0-B761-F6E3331A366E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE21148C-0B65-44E0-B761-F6E3331A366E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE21148C-0B65-44E0-B761-F6E3331A366E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE21148C-0B65-44E0-B761-F6E3331A366E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3931FF3B-01BF-4156-BCA9-CC1A735D6699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3931FF3B-01BF-4156-BCA9-CC1A735D6699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3931FF3B-01BF-4156-BCA9-CC1A735D6699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3931FF3B-01BF-4156-BCA9-CC1A735D6699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7BEBAC-7259-4DED-9B72-75387F7B140C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7BEBAC-7259-4DED-9B72-75387F7B140C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7BEBAC-7259-4DED-9B72-75387F7B140C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7BEBAC-7259-4DED-9B72-75387F7B140C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40067C71-7889-437E-AFCE-4F8002F3C368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40067C71-7889-437E-AFCE-4F8002F3C368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40067C71-7889-437E-AFCE-4F8002F3C368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40067C71-7889-437E-AFCE-4F8002F3C368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,109 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50A7FA4A-EEC3-4C4A-A654-B8CFC947C22B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommerceBuilder.Payments.Providers.GoogleCheckout</RootNamespace>
+    <AssemblyName>CommerceBuilder.GoogleCheckout</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Website\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Website\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommerceBuilder, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommerceBuilder.Configuration, Version=7.0.8581.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AC\AcCallbackRules.cs" />
+    <Compile Include="AC\AcNotifier.cs" />
+    <Compile Include="AC\ChargeAmountHandler.cs" />
+    <Compile Include="AC\ChargebackAmountHandler.cs" />
+    <Compile Include="AC\GoogleBasketShipment.cs" />
+    <Compile Include="AC\NewOrderHandler.cs" />
+    <Compile Include="AC\OrderAdjustmentHelper.cs" />
+    <Compile Include="AC\OrderStateChangeHandler.cs" />
+    <Compile Include="AC\RefundAmountHandler.cs" />
+    <Compile Include="AC\RiskInformationHandler.cs" />
+    <Compile Include="apiv2.cs">
+      <DependentUpon>apiv2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout\CheckoutShoppingCartRequest.cs" />
+    <Compile Include="Checkout\GCheckoutButton.cs" />
+    <Compile Include="Checkout\ParameterizedUrls.cs" />
+    <Compile Include="Checkout\ShippingRestrictions.cs" />
+    <Compile Include="GCheckoutRequest.cs" />
+    <Compile Include="GoogleCheckout.cs" />
+    <Compile Include="MerchantCalculation\AnonymousAddress.cs" />
+    <Compile Include="MerchantCalculation\CallbackProcessor.cs" />
+    <Compile Include="MerchantCalculation\CallbackRules.cs" />
+    <Compile Include="MerchantCalculation\ExampleRules.cs" />
+    <Compile Include="MerchantCalculation\MerchantCodeResult.cs" />
+    <Compile Include="MerchantCalculation\Order.cs" />
+    <Compile Include="MerchantCalculation\OrderLine.cs" />
+    <Compile Include="MerchantCalculation\ShippingResult.cs" />
+    <Compile Include="OrderProcessing\AddMerchantOrderNumberRequest.cs" />
+    <Compile Include="OrderProcessing\AddTrackingDataRequest.cs" />
+    <Compile Include="OrderProcessing\ArchiveOrderRequest.cs" />
+    <Compile Include="OrderProcessing\CancelOrderRequest.cs" />
+    <Compile Include="OrderProcessing\ChargeOrderRequest.cs" />
+    <Compile Include="OrderProcessing\DeliverOrderRequest.cs" />
+    <Compile Include="OrderProcessing\ProcessOrderRequest.cs" />
+    <Compile Include="OrderProcessing\RefundOrderRequest.cs" />
+    <Compile Include="OrderProcessing\SendBuyerMessageRequest.cs" />
+    <Compile Include="OrderProcessing\UnarchiveOrderRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AC\AcHelper.cs" />
+    <Compile Include="Util\BasicAuthenticationHandler.cs" />
+    <Compile Include="Util\BasicAuthenticationModule.cs" />
+    <Compile Include="Util\EncodeHelper.cs" />
+    <Compile Include="Util\GCheckoutResponse.cs" />
+    <Compile Include="Util\Log.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="apiv2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="apiv2.xsx">
+      <DependentUpon>apiv2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

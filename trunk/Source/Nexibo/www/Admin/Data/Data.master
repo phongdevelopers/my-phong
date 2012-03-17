@@ -1,0 +1,28 @@
+<%@ Master Language="C#" %>
+<%@ Register Src="~/Admin/UserControls/AdminHeader.ascx" TagName="AdminHeader" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/UserControls/AdminBreadCrumbs.ascx" TagName="AdminBreadCrumbs" TagPrefix="uc3" %>
+<%@ Register Src="~/Admin/UserControls/FooterPanel.ascx" TagName="FooterPanel" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Merchant Administration</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ajax:ScriptManager EnablePartialRendering="true" ID="ScriptManager1" runat="server" />
+              
+        <asp:contentplaceholder ID="BreadCrumbsPanel" runat="server">
+            <uc3:AdminBreadCrumbs ID="AdminBreadCrumbs1" runat="server" />
+        </asp:contentplaceholder>
+        <div id="admin_content">
+            <div style="background: #FFFFFF;">
+                <asp:contentplaceholder ID="MainContent" runat="server">
+                </asp:contentplaceholder>
+            </div>
+            <div>
+                <uc4:FooterPanel ID="FooterPanel1" runat="server" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

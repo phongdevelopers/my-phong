@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="2.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F4DEFC9-298C-44F0-98BF-95709B5F4C37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommerceBuilder.Web</RootNamespace>
+    <AssemblyName>CommerceBuilder.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Website\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommerceBuilder, Version=7.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommerceBuilder.Configuration, Version=7.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CommerceBuilder.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NVelocity, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+      <HintPath>..\Website\Bin</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Validators, Version=1.0.0.0, Culture=neutral, PublicKeyToken=08d88f24895e085d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CommerceBuilder\bin\Validators.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConLib\ConLibControl.cs" />
+    <Compile Include="ConLib\ConLibControlCollection.cs" />
+    <Compile Include="ConLib\ConLibControlParam.cs" />
+    <Compile Include="ConLib\ConLibDataSource.cs" />
+    <Compile Include="SiteMap\CommonSiteMapOptionKeys.cs" />
+    <Compile Include="SiteMap\ISiteMapOptionKeys.cs" />
+    <Compile Include="SiteMap\ISiteMapProvider.cs" />
+    <Compile Include="SiteMap\siteindex.cs">
+      <DependentUpon>siteindex.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMap\sitemap.cs">
+      <DependentUpon>sitemap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMap\SiteMapOptions.cs" />
+    <Compile Include="SiteMap\SiteMapUrl.cs" />
+    <Compile Include="UI\AbleCommerceAdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AbleCommercePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CaptchaGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\WebControls\CustomUrlValidator.cs" />
+    <Compile Include="UI\WebControls\IdRangeValidator.cs" />
+    <Compile Include="UI\WebControls\OptionPickerValidator.cs" />
+    <Compile Include="UI\WebControls\EmailAddressValidator.cs" />
+    <Compile Include="UI\WebControls\SearchKeywordValidator.cs" />
+    <Compile Include="WebflowManager.cs" />
+    <Compile Include="UI\Styles\DisplayPage.cs" />
+    <Compile Include="UI\Styles\DisplayPageDataSource.cs" />
+    <Compile Include="UI\Styles\Layout.cs" />
+    <Compile Include="UI\Styles\LayoutDataSource.cs" />
+    <Compile Include="UI\Styles\Theme.cs" />
+    <Compile Include="UI\Styles\ThemeDataSource.cs" />
+    <Compile Include="UI\WebControls\CaptchaImage.cs" />
+    <Compile Include="UI\WebControls\CreditCardValidator.cs" />
+    <Compile Include="UI\WebControls\DynamicSiteMapPath.cs" />
+    <Compile Include="UI\WebControls\DynamicSiteMapProvider.cs" />
+    <Compile Include="UI\WebControls\ExpirationDropDownValidator.cs" />
+    <Compile Include="UI\WebControls\OptionPicker.cs" />
+    <Compile Include="UI\WebControls\ProgressBar.cs" />
+    <Compile Include="UI\WebControls\RequiredRegularExpressionValidator.cs" />
+    <Compile Include="UI\WebControls\RoutingNumberValidator.cs" />
+    <Compile Include="UI\WebControls\SimpleIdTextBox.cs" />
+    <Compile Include="UI\WebControls\SortedGridView.cs" />
+    <Compile Include="UI\WebControls\ToolTipLabel.cs" />
+    <Compile Include="UI\WebControls\UpDownControl.cs" />
+    <Compile Include="UI\WebControls\ViewStateUtility.cs" />
+    <Compile Include="UI\WebControls\WebParts\ScriptletZone.cs" />
+    <Compile Include="UI\WebControls\WebParts\ScriptletPartExEditor.cs" />
+    <Compile Include="UI\WebControls\WebParts\ScriptletPartEx.cs" />
+    <Compile Include="UI\WebControls\WebParts\ScriptletPartEditor.cs" />
+    <Compile Include="UI\WebControls\WebParts\ScriptletPart.cs" />
+    <Compile Include="UI\WebControls\WebParts\DynamicCatalogPart.cs" />
+    <Compile Include="UI\WebControls\WebParts\HtmlDisplayEditorPart.cs" />
+    <Compile Include="UI\WebControls\WebParts\HtmlDisplayWebPart.cs" />
+    <Compile Include="UI\WebControls\WebParts\WebPartZone.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SiteMap\siteindex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiteMap\sitemap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\WebControls\SearchKeywordValidator.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
